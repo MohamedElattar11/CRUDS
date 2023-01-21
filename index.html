@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="crud">
+         
+        <div class="head">
+            <h1>cruds</h1>
+            <p>product mangement system</p>
+        </div>
+
+        <div class="data">
+            <input type="text" id="title" placeholder="title">
+
+            <div class="price">
+
+                <input onkeyup="getTotal()"type="number"id="price" placeholder="price">
+                <input onkeyup="getTotal()"type="number"id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()"type="number"id="abs" placeholder="abs">
+                <input onkeyup="getTotal()"type="number"id="discount" placeholder="discount">
+
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+
+            <button id="submitt">Create</button>
+
+        </div>
+
+
+        <div class="output">
+            <div class="search">
+                <input onkeyup=" searchData(this.value)" type="text"  id="search" placeholder="search">
+                <div class="btn-search">
+                    <div class="btnSearch">
+                        <button onclick="getSearch(this.id)" id="searchTitle">search by title</button>
+                        <button onclick="getSearch(this.id)" id="searchCategory">search by category</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="deleteAll">
+            
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>abs</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+    
+            <tbody id="tbody">
+            </tbody>
+    
+        </table>
+    </div>
+
+   
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>

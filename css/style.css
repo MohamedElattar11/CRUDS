@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #222;
+    color: #fff;
+    overflow-x: hidden;
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    line-height: 2;
+    width: 100%;
+}
+
+.head p{
+    font-weight: bold;
+    font-size: 14px;
+    word-spacing: 3;
+    letter-spacing: 2;
+    color: #ccc;
+}
+.data{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #111;
+    margin: 4px 0px;
+    border-radius: 4px;
+    padding: 4px;
+    color: #fff;
+    caret-color: red;
+}
+input::placeholder{
+    text-transform: capitalize;
+    padding: 5px;
+}
+input:focus{
+    background-color: #000;
+    transform: scale(1.1);
+}
+.price input{
+    width: 20%;
+}
+#total{
+    background-color: #a00d02;
+    padding: 5px 2px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+#total::before{
+    content: "Total : ";
+}
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #390053;
+    color: #fff;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: #51045f;
+    letter-spacing: 1px;
+    transition: 0.3s all;
+}
+.btnSearch{
+    display: flex;
+    justify-content: space-between ;
+}
+.btnSearch button{
+    width: 45%;
+    text-transform: capitalize;
+}
+
+#deleteAll{
+    margin: 20px 0px;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 20px;
+}
+table th{
+    text-transform: uppercase;
+}
+th,td{
+    padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .head{
+        width: 100% !important;
+    }
+    .price{
+        display: flex;
+        flex-direction: column;
+    }
+    .price input{
+        width: 100%;
+    }
+    table{
+        width:100% !important;
+        padding: 0px !important;
+    }
+    thead{
+        width: 100% !important;
+        margin: auto !important;
+    }
+    thead tr th{
+        font-size: 7px;
+    }
+    th,td{
+        padding: 0px 2px !important;
+    }
+    tbody tr td{
+        font-size: 7px !important;
+        margin: 20px 0px;
+    }
+    tbody tr{
+        border: 1px solid white;
+    }
+    tbody tr td button{
+        font-size: 7px !important;
+        height: 20px;
+    }
+    th,td{
+        padding: 0px 2px !important;
+    }
+  }
